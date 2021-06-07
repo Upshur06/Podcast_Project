@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Dashboard</title>
+    <title>Detail Page</title>
 </head>
-<body onload="fetch_all()">
-    <div class="container" style='padding:0'>       
+<body>
+    <div class="container" i style='padding:0'>       
         <div class="sidebar">
             <img width="80" src="./assests/logo.svg" alt="">
             <ul>
@@ -17,19 +17,24 @@
                 <li>Library</li>
             </ul>
         </div>
-        <div class="dashborad_main">
-            <div class="main">
-                <div class="featured_container" id="featured"></div>
-                <div class="latest">
-                    <h2>Latest</h2>
-                    <div id="shows">
 
-                    </div>
-                </div>
+        <div class="show_main">
+            <div class="detail_header" id="header"></div>
+
+            <div class="episodes">
+                <h2>Episodes</h2>
+                <div id="episodes"></div>
             </div>
         </div>
-    </div>
 
-    <script src='/js/index.js'></script>
+    </div>
+      
+        <script src='/js/index.js'></script>
+        <script>
+            let id = location.search.replace('?id=', '');
+            console.log(id);
+            get_Show(id);
+            get_Episodes(id);
+        </script>
 </body>
 </html>
