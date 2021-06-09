@@ -1,6 +1,6 @@
 let bearer_token = ''
 let url = '';
-let bearer = ;
+let bearer = ';
 
 function fetch_featured(){
     let show_id = "";
